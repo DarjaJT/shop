@@ -12,7 +12,9 @@
   </head>
   <body>
     <%= render partial: 'shared/navbar' %>
-    <%= render partial: 'shared/header' %>
+    <% if content_for :header %>
+      <%= yield :header %>
+    <% end %>
 
     <!-- Page Content -->
     <div class="container">
